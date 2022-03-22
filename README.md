@@ -5,18 +5,62 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `src/pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The `src/pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+#### Branching
+
+Create a new branch under name
+
+- If feature change `feat/[featute-name]`
+- If bug fix `fix/[bug-name]`
+- If there major changes to dev env or prod env `chore/[change type]`
+
+#### Commit Messages
+
+```
+<type>(<scope?>): <description>
+
+<body?>
+
+<footer?>
+```
+
+A good commit message should describe what changed and why.
+
+#### Example of commit messages with semantic prefixes:
+
+```
+fix: don't overwrite prevent default
+feat(core): add restrict mode
+docs: update the molecule description
+```
+
+#### Common prefixes:
+
+```
+build       Affects the build system ot external dependencies
+chore       Other changes that don't modify src or test fiels
+ci          Changes CI configaration files and scripts.
+docs        Adds or alters documentation.
+feat        Adds a new feature
+fix         Solves a bug
+perf        Improves performance.
+refactor    Rewrites code without feature, performance or bug changes.
+revert      Reverts a previous commit.
+style       Improves code formatting, white-space.
+test        Add or modfies tests.
+```
+
+> Learn more on https://www.conventionalcommits.org/en/v1.0.0/ > https://commitlint.js.org/#/
 
 ## Learn More
 
