@@ -25,7 +25,12 @@
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"]
-    }
+    },
+    "allowUnreachableCode": false,
+    "declaration": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "sourceMap": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist", ".next", "next.config.js"]

@@ -10,6 +10,7 @@ dist/
 .next/
 **/.next/**
 **/_next/**
+next-env.d.ts
 
 # Test products
 coverage/
