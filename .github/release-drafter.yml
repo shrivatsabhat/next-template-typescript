@@ -1,0 +1,50 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+categories:
+  - title: 'Breaking Changes'
+    labels:
+      - 'breaking changes'
+  - title: 'Features'
+    labels:
+      - 'chore:pages'
+      - 'feat'
+      - 'styles'
+  - title: 'Fixed'
+    labels:
+      - 'bug'
+      - 'fix'
+  - title: 'Maintenance'
+    labels:
+      - 'assests'
+      - 'chore'
+      - 'styles:global'
+      - 'workflow'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - 'release:major'
+  minor:
+    labels:
+      - 'release:minor'
+  patch:
+    labels:
+      - 'release:patch'
+  default: patch
+template: |
+  ## What's ChangedChanges
+
+  $CHANGES
+
+autolabeler:
+  - label: 'bug'
+    branch:
+      - '/fix\/.+/'
+    title:
+      - '/fix/i'
+  - label: 'feat'
+    branch:
+      - '/feat\/.+/'
+    body:
+      - '/\/issues\//'
